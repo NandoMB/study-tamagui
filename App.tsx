@@ -26,7 +26,7 @@ export default function App() {
     <TamaguiProvider config={config} defaultTheme="dark">
       <Theme name={colorScheme === 'dark' ? 'dark' : 'light'}>
         <View style={{ flex: 1 }}>
-          <StatusBar style="auto" />
+          <StatusBar style={colorScheme === 'dark' ? 'dark' : 'light'} />
           <Docs />
         </View>
       </Theme>
