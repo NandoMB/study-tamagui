@@ -5,8 +5,7 @@ module.exports = function(api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-			['@tamagui/babel-plugin', {
-        // components: [],
+      ['@tamagui/babel-plugin', {
         components: [
           // 'tamagui',
           '@tamagui/core'
@@ -14,10 +13,10 @@ module.exports = function(api) {
         config: './tamagui.config.ts',
         logTimings: true
       }],
-			['transform-inline-environment-variables', {
+      ['transform-inline-environment-variables', {
         include: 'TAMAGUI_TARGET',
       }],
-			'react-native-reanimated/plugin',
-		]
+      'react-native-reanimated/plugin',
+    ]
   };
 };
