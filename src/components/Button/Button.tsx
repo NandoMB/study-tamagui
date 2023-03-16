@@ -1,6 +1,12 @@
+import { StyledButton, StyledButtonProps } from './Button.styled';
+import Text from '../Text';
 
-export default function Button({ ...rest }) {
+type ButtonProps = StyledButtonProps & {};
+
+export default function Button({ children, ...rest }: ButtonProps) {
   return (
-    <></>
+    <StyledButton>
+      <Text>{children}</Text>
+    </StyledButton>
   )
 }
