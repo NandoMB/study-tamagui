@@ -1,7 +1,6 @@
 import { convertTokensToTamaguiVariables } from '../helpers';
-import { ITokens } from '../types';
 
-export const tokens = {
+export default convertTokensToTamaguiVariables('spaces', {
   "0": 0,
   "0.25": 0.5,
   "0.5": 1,
@@ -60,6 +59,4 @@ export const tokens = {
   "-18": -158,
   "-19": -172,
   "-20": -186
-} as ITokens;
-
-export const variables = convertTokensToTamaguiVariables('spaces', tokens);
+});

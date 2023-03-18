@@ -1,7 +1,6 @@
 import { convertTokensToTamaguiVariables } from '../helpers';
-import { ITokens } from '../types';
 
-export const tokens = {
+export default convertTokensToTamaguiVariables('radius', {
   "0": 0,
   "1": 3,
   "2": 5,
@@ -16,6 +15,4 @@ export const tokens = {
   "10": 34,
   "11": 42,
   "12": 50,
-} as ITokens;
-
-export const variables = convertTokensToTamaguiVariables('radius', tokens);
+});

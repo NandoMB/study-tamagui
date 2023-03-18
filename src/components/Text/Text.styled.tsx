@@ -1,9 +1,9 @@
-import { Text, styled, GetProps } from '@tamagui/core';
+import { Text, styled, GetProps } from 'tamagui';
 
 export const StyledText = styled(Text, {
   name: 'StyledText',
   fontFamily: '$poppins',
-  fontStyle: 'italic'
+  // fontStyle: 'italic'
 })
 
 export type StyledTextProps = GetProps<typeof StyledText>

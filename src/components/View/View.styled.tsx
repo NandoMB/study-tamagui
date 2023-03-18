@@ -1,4 +1,4 @@
-import { Stack, styled, GetProps } from '@tamagui/core';
+import { Stack, styled, GetProps } from 'tamagui';
 
 export const StyledView = styled(Stack, {
   name: 'StyledView'

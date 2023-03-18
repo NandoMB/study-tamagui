@@ -1,6 +1,6 @@
 import { createAnimations } from '@tamagui/animations-react-native';
 
-export const plainTokens = {
+export default createAnimations({
 	bouncy: {
 		type: 'spring',
 		damping: 10,
@@ -18,6 +18,4 @@ export const plainTokens = {
 		mass: 1.2,
 		stiffness: 250,
 	}
-};
-
-export const tamaguiTokens = createAnimations(plainTokens as any);
+});

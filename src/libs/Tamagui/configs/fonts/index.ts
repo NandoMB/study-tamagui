@@ -1,4 +1,4 @@
-import { createFont } from '@tamagui/core';
+import { createFont } from 'tamagui';
 
 const Poppins = createFont({
   family: 'Poppins',
@@ -91,5 +91,9 @@ const Poppins = createFont({
 export default {
   heading: Poppins,
   body: Poppins,
+  mono: Poppins,
   poppins: Poppins,
+  // body: "system-ui, sans-serif",
+  // heading: "Georgia, serif",
+  // mono: "Menlo, monospace",
 };

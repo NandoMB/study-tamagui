@@ -1,14 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, useColorScheme } from 'react-native';
-// import { Paragraph, Spacer, Text, TamaguiProvider, Theme, YStack } from 'tamagui';
-import { TamaguiProvider, Theme } from '@tamagui/core';
+import { useColorScheme, LogBox } from 'react-native';
+import { TamaguiProvider, Theme, YStack, useTheme } from 'tamagui';
 import * as Poppins from '@expo-google-fonts/poppins';
 import useFontLoader from './src/hooks/useFontLoader';
 import config from './tamagui.config';
 import Docs from './src/screens/Docs';
+import Button from './src/components/Button';
 
 
 export default function App() {
+  LogBox.ignoreLogs([
+    `warning: matchMedia implementation is not provided.`
+  ]);
   const colorScheme = useColorScheme();
   const [loaded, error] = useFontLoader([
     { font: Poppins, ignore: ['__metadata__', 'useFonts'] }
@@ -23,12 +26,17 @@ export default function App() {
   }
 
   return (
-    <TamaguiProvider config={config} defaultTheme="dark">
+    <TamaguiProvider config={config}>
       <Theme name={colorScheme === 'dark' ? 'dark' : 'light'}>
-        <View style={{ flex: 1 }}>
-          <StatusBar style={colorScheme === 'dark' ? 'dark' : 'light'} />
+        <YStack flex={1} backgroundColor="$background">
+          <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
+          <Button marginTop={60} onPress={() => {
+            // console.log(JSON.stringify(theme, null, 2));
+          }}>
+            Change to {colorScheme === 'dark' ? 'light' : 'dark'}
+          </Button>
           <Docs />
-        </View>
+        </YStack>
       </Theme>
     </TamaguiProvider>
   );

@@ -1,6 +1,6 @@
 import { createMedia } from '@tamagui/react-native-media-driver';
 
-export const plainTokens = {
+export default createMedia({
 	xs: { maxWidth: 660 },
 	sm: { maxWidth: 800 },
 	md: { maxWidth: 1020 },
@@ -15,6 +15,4 @@ export const plainTokens = {
 	tall: { minHeight: 820 },
 	hoverNone: { hover: 'none' },
 	pointerCoarse: { pointer: 'coarse' }
-};
-
-export const tamaguiTokens = createMedia(plainTokens);
+});

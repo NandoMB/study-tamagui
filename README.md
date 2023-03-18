@@ -5,7 +5,7 @@
 ```
 
 ```bash
-npx expo install expo-font expo-linear-gradient react-native-reanimated
+npx expo install expo-font expo-linear-gradient react-native-reanimated react-native-svg
 ```
 
 ```bash

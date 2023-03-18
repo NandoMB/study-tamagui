@@ -1,12 +1,13 @@
 import { StyledButton, StyledButtonProps } from './Button.styled';
-import Text from '../Text';
 
-type ButtonProps = StyledButtonProps & {};
+type ButtonProps = StyledButtonProps & {
+  // You can add more properties here...
+};
 
 export default function Button({ children, ...rest }: ButtonProps) {
   return (
-    <StyledButton>
-      <Text>{children}</Text>
+    <StyledButton {...rest}>
+      {children}
     </StyledButton>
-  )
+  );
 }
